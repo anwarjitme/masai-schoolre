@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout1</title>
+<style>
+#main{
+    
+    /* border: 1px solid teal; */
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(6,100px) ;
+    gap: 20px;
+    grid-template-areas: 
+    "a a"
+   "b c" 
+   "b c"
+   "b c"
+   "b c"
+   "b c"
+   ;
+}
+
+#main>div:nth-child(1){
+   grid-area: a; 
+   background-color: yellow;
+}
+#main>div:nth-child(2){
+   grid-area: b; 
+   background-color: red;
+}
+#main>div:nth-child(3){
+   grid-area: c; 
+   background-color: green;
+}
+h1{
+    padding-left: 10px;
+    color: black;
+}
+h3{
+    padding-left: 10px;
+    color: blueviolet;
+}
+@media all and (min-width: 320px) and (max-width: 720px){
+    #main{
+    /* width: 80%; */
+  
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 150px 150px ;
+    gap: 20px;
+    grid-template-areas: 
+   "a "
+   "b"
+   "c"
+   ;
+}
+#main>div:nth-child(1){
+ display: flex; 
+ justify-content: center ;
+ align-items: center; 
+ justify-content: flex-start;
+}
+h1{
+    padding-left: 10px;
+    color: black;
+}
+h3{
+    padding-left: 10px;
+    color: blueviolet;
+}
+}
+</style>
+</head>
+<body>
+<div id="main">
+<div><h1>Navigation</h1></div>
+<div><h3>LEFT BOX</h3></div>
+<div><h3>RIGHT BOX</h3></div>
+</div>
+</body>
+</html>

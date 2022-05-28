@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout3</title>
+</head>
+<style>
+#main{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+   
+    /* border: 1px solid black ; */
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(7,70px);
+    gap: 20px 35px;
+    grid-template-areas: 
+   "a a a"
+   "b b c"
+   "b b c"
+   "b b d"
+   "b b d"
+   "b b e"
+   "b b e"
+    ;
+}
+
+h3{
+    color: rgb(166, 92, 235);
+    padding-left: 15px;
+}
+#main>div:nth-child(1){
+    grid-area: a;
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+
+
+}
+#main>div:nth-child(2){
+    grid-area: b;
+    background-color: red;
+}#main>div:nth-child(3){
+    grid-area: c;
+    background-color: green;
+}
+#main>div:nth-child(4){
+    grid-area: d;
+    background-color: green;
+}
+#main>div:nth-child(5){
+    grid-area: e;
+    background-color: green;
+}
+@media all and (min-width: 480px) and (max-width: 720px){
+    #main{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+   
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 70px 300px 120px;
+    gap: 20px 35px;
+    grid-template-areas: 
+  "a a a"
+  "b b b"
+  "c d e"
+    ;
+}
+}
+@media all and (min-width: 1px) and (max-width: 479px){
+    #main{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+   
+    border: 1px solid black ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 43% 27% 27% 27% ;
+    gap: 10px;
+    grid-template-areas: 
+"a"
+"b"
+"c"
+"d"
+"e"  ;
+}
+#main>div:nth-child(1){
+    grid-area: a;
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
+
+}
+}
+</style>
+<body>
+   <div id="main">
+  <div><h1>Navigation</h1></div> 
+  <div><h3>LEFT BOX</h3></div>  
+  <div><h3>RIGHT BOX 1</h3></div>  
+  <div><h3>RIGHT BOX 1</h3></div> 
+  <div><h3>RIGHT BOX 1</h3></div> 
+   </div> 
+</body>
+</html>
