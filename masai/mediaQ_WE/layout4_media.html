@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout4</title>
+</head>
+<style>
+#main{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,75px);
+    gap: 20px;
+    grid-template-areas: 
+    "a a a a"
+    "b c d e"
+    "b c d e"
+    "b c d e"
+    
+    ;
+}
+#main>div:nth-child(1){
+    grid-area: a;
+    background-color: yellow;
+}
+#main>div:nth-child(2){
+    grid-area: b;
+    background-color: red;
+}
+#main>div:nth-child(3){
+    grid-area: c;
+    background-color: green;
+}
+#main>div:nth-child(4){
+    grid-area: d;
+    background-color: rgb(53, 53, 210);
+}
+#main>div:nth-child(5){
+    grid-area: e;
+    background-color: gray;
+}
+h1{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+h2{
+    padding-left: 10px;
+    color: rgb(70, 43, 95);
+}
+@media all and (min-width: 480px) and (max-width: 720px){
+    #main{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 75px 250px 250px;
+    gap: 20px;
+    grid-template-areas: 
+    "a a"
+    "b c"
+    "d e"
+    ;
+}
+}
+@media all and (min-width: 1px) and (max-width: 479px){
+    #main{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px repeat(5,150px);
+    gap: 20px;
+    grid-template-areas: 
+    "a "
+    "b "
+    "c"
+    "d"
+    "e"
+    ;
+}
+}
+</style>
+<body>
+  <div id="main">
+<div><h1>Navigation</h1></div>
+<div><h2>Box 1</h2></div>
+<div><h2>Box 2</h2></div>
+<div><h2>Box 3</h2></div>
+<div><h2>Box 4</h2></div>
+  </div>  
+</body>
+</html>

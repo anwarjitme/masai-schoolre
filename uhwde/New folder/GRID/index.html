@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<style>
+#main{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    /* border: 1px solid teal; */
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: repeat(3,100px);
+    gap: 20px;
+    grid-template-areas: 
+    "a b b c"
+    "d d e f"
+    "g h i i"
+    ;
+}
+#main>div{
+    background-color: teal;
+    padding: 35px;
+    border-radius: 5px;
+
+}
+#main>div:nth-child(1){
+grid-area: a;
+}
+#main>div:nth-child(2){
+    grid-area: b;
+}
+#main>div:nth-child(3){
+    grid-area: c;
+}
+#main>div:nth-child(4){
+    grid-area: d;
+}
+#main>div:nth-child(5){
+    grid-area: e;
+}
+#main>div:nth-child(6){
+    grid-area: f;
+}
+#main>div:nth-child(7){
+    grid-area: g;
+}
+#main>div:nth-child(8){
+    grid-area: h;
+}
+#main>div:nth-child(9){
+    grid-area: i;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="main">
+<div></div>
+<div></div>
+<div></div>
+<div></div> 
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div> </div>
+</body>
+</html>

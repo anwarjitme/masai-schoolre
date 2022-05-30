@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <title>Grid1</title>
+ <style>
+#main{
+    /* margin-top: 300px; */
+    margin: auto;
+    /* height: 300px; */
+   justify-content: center;
+   align-items: center;
+   width: 70%;
+  
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,50px);
+gap:50px;
+grid-template-areas:
+"a a b b"
+"c d d d"
+"e e e e";
+}
+
+#main>div{
+    justify-content: center;
+   align-items: center;
+    background-color: rgb(73, 71, 71);
+    /* justify-content: start; */
+  color: white;
+    border-radius: 8px;
+    font-size: 30px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-top: 50px;
+   
+}
+#main>div:nth-child(1){
+grid-area: a;
+}
+#main>div:nth-child(2){
+    grid-area: b;  
+}
+#main>div:nth-child(3){
+    grid-area: c;  
+}
+#main>div:nth-child(4){
+    grid-area: d;
+}
+#main>div:nth-child(5){
+    grid-area: e; 
+}
+
+ </style>   
+</head>
+<body>
+   <div id="main">
+<div>A</div>
+<div>B</div>
+<div>C</div>
+<div>D</div>
+<div>E</div>
+
+   </div> 
+</body>
+</html>
